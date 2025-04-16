@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony Sports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      background-color: #0d0d0d;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #00BFFF;
+      letter-spacing: 1px;
+    }
+
+    header h1 span {
+      color: #32CD32;
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      color: #FF0000;
+      background-color: #1a1a1a;
+      padding: 6px 10px;
+      border-radius: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .live-badge .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #FF0000;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      top: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .overlay-image {
+      position: absolute;
+      top: 70px;
+      left: 15px;
+      width: 90px;
+      max-width: 30vw;
+      height: auto;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 20px;
+      }
+
+      .live-badge {
+        font-size: 13px;
+        padding: 5px 8px;
+      }
+
+      .overlay-image {
+        width: 60px;
+        left: 303px;
+        top: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Live Sports <span>24</span></h1>
+    <div class="live-badge"><div class="dot"></div>LIVE</div>
+  </header>
+  <div class="container">
+    <iframe 
+  src="https://bdixtv24.pro/?play=9b4b3941986a&.m3u8" 
+  allowfullscreen 
+  sandbox="allow-same-origin allow-scripts allow-presentation">
+</iframe>
+    <img class="overlay-image" src="https://i.postimg.cc/GpCZN8Nj/20250415-115326.png" alt="Overlay">
+  </div>
+  <script async="async" data-cfasync="false" src="//pl26377079.profitableratecpm.com/cdeccdd75d3e2e6916a42ce9653cfb08/invoke.js"></script>
+<div id="container-cdeccdd75d3e2e6916a42ce9653cfb08"></div>
+</body>
+  <script>
+  // মূল উইন্ডোতে কোনো রিডিরেক্ট ঠেকাতে
+  (function() {
+    const originalAssign = window.location.assign;
+    const originalReplace = window.location.replace;
+    const originalHref = Object.getOwnPropertyDescriptor(window.location.__proto__, 'href').set;
+
+    window.location.assign = function() {
+      console.warn("Blocked location.assign");
+    };
+    window.location.replace = function() {
+      console.warn("Blocked location.replace");
+    };
+    Object.defineProperty(window.location, 'href', {
+      set: function() {
+        console.warn("Blocked setting location.href");
+      }
+    });
+
+    // Unload বা beforeunload এর event ব্লক করুন
+    window.onbeforeunload = null;
+    window.onunload = null;
+
+    // যদি কোনো স্ক্রিপ্ট পপআপ খুলতে চায়, সেটাও বন্ধ
+    window.open = function() {
+      console.warn("Blocked window.open");
+      return null;
+    };
+  })();
+      </script>
+</html>

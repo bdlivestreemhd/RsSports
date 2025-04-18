@@ -4,317 +4,27 @@
 
 <head>
 
-
-
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Free iptv</title>
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
 
-    <link rel="shortcut icon" href="favicon.png">
+    <meta name="keywords" content="video, streaming, cine arena, cine-arena, sports">
 
-    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="Cine Arena live streaming - Watch Sports for free.">
+
+    <title>CineArena.Live</title>
+
+    <link rel="icon" href="favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
 
-        body {
 
-            font-family: 'Helvetica Neue', Arial, sans-serif;
 
-            margin: 0;
-
-            padding: 10px;
-
-            background-color: #000;
-
-            color: #fff;
-
-        }
-
-        /* Menu Styling */
-
-        .menu {
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            gap: 20px;
-
-            
-
-            width: 100%;
-
-            z-index: 10;
-
-        }
-
-
-
-        .menu a {
-
-            text-decoration: none;
-
-            color: #fff;
-
-            font-size: 18px;
-
-            font-weight: bold;
-
-            padding: 10px 20px;
-
-            border-radius: 8px;
-
-            position: relative;
-
-            overflow: hidden;
-
-            transition: color 0.3s ease;
-
-        }
-
-
-
-        /* Neon Glow Effect */
-
-        .menu a::before {
-
-            content: '';
-
-            position: absolute;
-
-            top: 50%;
-
-            left: 50%;
-
-            width: 300%;
-
-            height: 300%;
-
-            background-color: rgba(0, 255, 255, 0.7);
-
-            animation: neon-border 3s infinite alternate;
-
-            transform: translate(-50%, -50%);
-
-            border-radius: 50%;
-
-            z-index: -1;
-
-        }
-
-
-
-        @keyframes neon-border {
-
-            0% {
-
-                box-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
-
-                background-color: rgba(0, 255, 255, 0.7);
-
-            }
-
-            50% {
-
-                box-shadow: 0 0 10px rgba(255, 0, 255, 1), 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.6);
-
-                background-color: rgba(255, 0, 255, 0.7);
-
-            }
-
-            100% {
-
-                box-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6);
-
-                background-color: rgba(255, 255, 0, 0.7);
-
-            }
-
-        }
-
-        
-
-        .file-container {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            justify-content: center;
-
-            padding: 10px;
-
-        }
-
-        .directory-item, .file-item {
-
-            margin: 10px;
-
-            text-align: center;
-
-            border-radius: 8px;
-
-            overflow: hidden;
-
-            transition: transform .3s ease, box-shadow .3s ease;
-
-            background-color: #1a1a1a;
-
-            padding: 10px;
-
-            width: calc(14.28% - 20px);
-
-            box-sizing: border-box;
-
-        }
-
-        .directory-item img, .file-item img {
-
-            max-width: 100%;
-
-            height: auto;
-
-            display: block;
-
-            margin: 0 auto;
-
-            transition: transform .3s ease;
-
-        }
-
-        .directory-item a, .file-item a {
-
-            text-decoration: none;
-
-            color: gray;
-
-            font-weight: 700;
-
-            display: block;
-
-            margin-top: 5px;
-
-            transition: color .3s ease;
-
-        }
-
-        .directory-item:hover, .file-item:hover {
-
-            transform: scale(1.05);
-
-            box-shadow: 0 0 10px rgba(255, 255, 255, .3);
-
-        }
-
-        .directory-item img:hover, .file-item img:hover {
-
-            transform: scale(1.1);
-
-        }
-
-        .directory-item a:hover, .file-item a:hover {
-
-            color: #fff;
-
-        }
-
-        h1 {
-
-            text-align: center;
-
-            color: #ffffff;
-
-            margin-bottom: 20px;
-
-        }
-
-        .telegram-toggle {
-
-            position: fixed;
-
-            top: 10px;
-
-            right: 10px;
-
-            background-color: #0088cc;
-
-            color: white;
-
-            padding: 10px 15px;
-
-            border-radius: 50px;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-        }
-
-        .telegram-toggle:hover {
-
-            background-color: #006699;
-
-        }
-
-        @media (max-width: 1024px) {
-
-            .directory-item, .file-item {
-
-                width: calc(25% - 20px);
-
-            }
-
-        }
-
-        @media (max-width: 768px) {
-
-            .directory-item, .file-item {
-
-                width: calc(33.333% - 20px);
-
-            }
-
-        }
-
-        @media (max-width: 480px) {
-
-            .directory-item, .file-item {
-
-                width: calc(50% - 20px);
-
-                margin: 5px;
-
-                padding: 5px;
-
-            }
-
-            .telegram-toggle {
-
-                padding: 5px 10px;
-
-                font-size: 12px;
-
-            }
-
-            h1 {
-
-                font-size: 24px;
-
-                margin-bottom: 10px;
-
-            }
-
-        }
-
-
-
-        .sticky-footer {
+	.sticky-footer {
 
            position: fixed;
 
@@ -330,192 +40,260 @@
 
            padding: 0px;
 
-        }
-
-        
+	}
 
     </style>
 
-    
-
 </head>
 
-
-
-    <script data-cfasync="false" type="text/javascript" id="clever-core">
-
-/* <![CDATA[ */
-
-    (function (document, window) {
-
-        var a, c = document.createElement("script"), f = window.frameElement;
+<body class="bg-gray-100 text-gray-900 transition-all">
 
 
 
-        c.id = "CleverCoreLoader91139";
+    <!-- Header -->
 
-        c.src = "https://cdn-adtech.com/3d9e314d1aec5d4681f05e8f58c75e67.js";
+    <header class="p-4 bg-blue-900 text-white text-center text-2xl font-bold">
 
+       <a href="https://cinearena.live/"> <img src="https://i.postimg.cc/zfSdmR3S/20250418-233514.png" class="h-10 md:h-10 lg:h-10 mx-auto"></a>
 
-
-        c.async = !0;
-
-        c.type = "text/javascript";
-
-        c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
-
-        c.setAttribute("data-callback", "put-your-callback-function-here");
-
-        c.setAttribute("data-callback-url-click", "put-your-click-macro-here");
-
-        c.setAttribute("data-callback-url-view", "put-your-view-macro-here");
-
-        
+    </header>
 
 
 
-        try {
+    <!-- Search & Dark Mode Toggle -->
 
-            a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+    <div class="flex justify-center items-center p-4 gap-4">
 
-        } catch (e) {
+        <input type="search" id="search" placeholder="Search Channels..." 
 
-            a = !1;
+               class="px-4 py-2 rounded border border-gray-400 text-black focus:outline-none focus:ring-2 focus:ring-blue-400">
 
-        }
+        <button id="theme-toggle" class="px-4 py-2 bg-gray-100 text-black rounded border border-gray-400">🌙</button>
 
-
-
-        a  (a = document.getElementsByTagName("head")[0]  document.getElementsByTagName("body")[0]);
-
-        a.parentNode.insertBefore(c, a);
-
-    })(document, window);
-
-/* ]]> */
-
-    </script>
-
-    
-
-<body>
-
-    <a href="https://t.me/rslivetv" class="telegram-toggle">Join Telegram</a>
-
-    <h1>LIVE EVENTS</h1>
-
-    <div class="file-container">
+    </div>
 
 
 
+    <!-- Channel Grid -->
+
+    <div id="channel-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-4">
 
 
-     
+
+	
+
+        <a href="https://livesports24.netlify.app/starhindi" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
+
+            <img src="https://i.postimg.cc/6qsgtNtC/20250418-141803.png" alt="Hindi" class="w-20 h-20 mx-auto">
+
+            <p class="mt-2 font-semibold">Star Sports 1 Hindi</p>
+
+        </a> 
 
         
 
-        <div class='directory-item'>
+	    
 
-            <a href='toffee.html'><img src='https://i.postimg.cc/0jMFqqNs/20250418-141524.png' alt='IPL'></a>
+	<a href="https://livesports24.netlify.app/ptv" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
 
-            <a href='toffee.html'>IPL Live</a></div>
+            <img src="iplhin.jpg" alt="Hindi" class="w-20 h-20 mx-auto">
 
-        <div class='directory-item'>
+            <p class="mt-2 font-semibold">Ptv Sports</p>
 
-            <a href='Asports.html'><img src='https://i.postimg.cc/FKZFq0f4/20250418-141440.png24x1024bb.png' alt='A Sports'></a>
-
-            <a href='Asports.html'>A Sports</a></div>
-
-        
-<div class='directory-item'>
-
-            <a href='PTV.html'><img src='https://i.postimg.cc/G3kpgfzs/20250418-175736.png' alt='PTV'></a>
-
-            <a href='PTV.html'>Ptv Sports</a></div>
-
-
-        <div class='directory-item'>
-
-            <a href='tsports.html'><img src='https://i.postimg.cc/gk9sSh3j/20250418-141706.png' alt='tsports'></a>
-
-            <a href='tsports.html'>T Sports</a></div>
-
-
-
-<div class='directory-item'>
-
-            <a href='starhindi.html'><img src='https://i.postimg.cc/kgV9C3k5/20250418-141347.png' alt='Star SportsHindi'></a>
-
-            <a href='starhindi.html'>Star Sports Hindi</a></div>
-
-        <div class='directory-item'>
-
-            <a href='Willow.html'><img src='https://i.postimg.cc/mZdb3KQy/20250418-145126.png' alt='Willow'></a>
-
-            <a href='Willow.html'>Willow Sports</a></div>
+        </a>
 
         
 
-        <div class='directory-item'>
+        <a href="https://cricstream4u.github.io/jwplyr?file=https://wowza1.leisertv.com/live/skysportscrickethd.stream/playlist.m3u8" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
 
-            <a href='fancode.html'><img src='https://i.postimg.cc/HxctSqr8/20250418-144628.png' alt='Fancode'></a>
+            <img src="https://i.postimg.cc/SQv9DYY5/20250418-141839.png" alt="English" class="w-20 h-20 mx-auto">
 
-            <a href='fancode.html'>Fancode</a></div>
+            <p class="mt-2 font-semibold">Star Sports 2</p>
+
+        </a>
+
+
+
+	<a href="https://cricstream4u.github.io/ipl-hindi2" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
+
+            <img src="star1hd.jpg" alt="StarSports1Hindi" class="w-20 h-20 mx-auto">
+
+            <p class="mt-2 font-semibold">Star Sports1 Hindi</p>
+
+	</a>
+
+
+
+	<a href="https://cinearena.live/astrocricket" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
+
+            <img src="astrocricket.jpg" alt="Astro Cricket" class="w-20 h-20 mx-auto">
+
+            <p class="mt-2 font-semibold">Astro Cricket</p>
+
+	</a>
+
+
+
+	<a href="https://cinearena.live/willowbycricbuzz" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
+
+            <img src="willowbycricbuzz.jpg" alt="Willow by Cricbuzz" class="w-20 h-20 mx-auto">
+
+            <p class="mt-2 font-semibold">Willow by Cricbuzz</p>
+
+	</a>
 
         
 
+        <a href="https://cricstream4u.github.io/jwplyr?file=https://wowza1.leisertv.com/live/skysportscrickethd.stream/playlist.m3u8" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
 
+            <img src="skysportscricket.jpg" alt="Sky Sports" class="w-20 h-20 mx-auto">
+
+            <p class="mt-2 font-semibold">Sky Sports Cricket</p>
+
+        </a>
+
+
+
+	<a href="https://cricstream4u.github.io/tsports" class="channel-card block p-4 border border-gray-200 rounded shadow text-center transition-all">
+
+            <img src="tsports.jpg" alt="T Sports" class="w-20 h-20 mx-auto">
+
+            <p class="mt-2 font-semibold">T Sports</p>
+
+	</a>
+
+        
+
+        
+
+        
+
+    </div>
+
+
+
+    <!-- Footer 
+
+    <footer class="p-4 bg-gray-800 text-white text-center mt-8" style="position: fixed; left:0; bottom:0; width:100%; ">
+
+        2025 CineArena.live All rights reserved.
+
+    </footer>
+
+	-->
 
 
 
     <script>
 
-        // Disable right-click
+        // Dark Mode Toggle with Local Storage
 
-        document.addEventListener("contextmenu", function(e) {
+        const toggleButton = document.getElementById('theme-toggle');
 
-            e.preventDefault();
+        const body = document.body;
 
-        });
+        const cards = document.querySelectorAll('.channel-card');
 
-        
 
-        // Disable keyboard shortcuts for DevTools
 
-        document.addEventListener("keydown", function(e) {
+        function applyDarkMode(enable) {
 
-            if (e.key === "F12" || 
+            if (enable) {
 
-                (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+                body.classList.add('dark');
 
-                (e.ctrlKey && e.key === "U")) {
+                body.classList.replace('bg-gray-100', 'bg-gray-900');
 
-                e.preventDefault();
+                body.classList.replace('text-gray-900', 'text-gray-200');
+
+                cards.forEach(card => {
+
+                    card.classList.replace('bg-white', 'bg-gray-800');
+
+                    card.classList.replace('text-gray-900', 'text-gray-200');
+
+                });
+
+                toggleButton.textContent = "☀️";
+
+                localStorage.setItem('dark-mode', 'enabled');
+
+            } else {
+
+                body.classList.remove('dark');
+
+                body.classList.replace('bg-gray-900', 'bg-gray-100');
+
+                body.classList.replace('text-gray-200', 'text-gray-900');
+
+                cards.forEach(card => {
+
+                    card.classList.replace('bg-gray-800', 'bg-white');
+
+                    card.classList.replace('text-gray-200', 'text-gray-900');
+
+                });
+
+                toggleButton.textContent = "🌙";
+
+                localStorage.setItem('dark-mode', 'disabled');
 
             }
 
+        }
+
+
+
+        // Load theme from localStorage
+
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+
+            applyDarkMode(true);
+
+        }
+
+
+
+        toggleButton.addEventListener('click', () => {
+
+            applyDarkMode(!body.classList.contains('dark'));
+
         });
 
-        
 
-        // Detect DevTools open
 
-        setInterval(function() {
+        // Real-Time Search
 
-            if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+        document.getElementById('search').addEventListener('input', function() {
 
-                alert("Developer tools are disabled!");
+            let searchValue = this.value.toLowerCase();
 
-                window.location.reload();
+            document.querySelectorAll('.channel-card').forEach(card => {
 
-            }
+                let name = card.querySelector('p').textContent.toLowerCase();
 
-        }, 1000);
+                card.style.display = name.includes(searchValue) ? "block" : "none";
+
+            });
+
+        });
+
+    </script>
+
+
+
+
+
+<!--Adsterra-->
 
     
+
+   
+
+	<br><br><br><br><br><br>
 
 
 
 </body>
 
-    </html>
+</html>
